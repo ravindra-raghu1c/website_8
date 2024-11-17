@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marketplace - Enhanced Features</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to Our Marketplace</h1>
+    <nav>
+      <a href="#" onclick="showPage('home')">Home</a>
+      <a href="#" onclick="showPage('products')">Products</a>
+      <a href="#" onclick="showPage('product-details')">Product Details</a>
+    </nav>
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  </header>
+
+  <main id="home">
+    <div class="intro-section">
+      <h1>Explore a Variety of Amazing Products</h1>
+      <p>Our marketplace offers a wide range of products including electronics, clothing, groceries, and home essentials. We strive to provide the best quality at affordable prices.</p>
+      <a href="#" onclick="showPage('products')" class="btn">Shop Now</a>
+    </div>
+
+    <div class="section-info">
+      <div class="info-card">
+        <img src="https://i.pinimg.com/474x/a4/3f/03/a43f03bea25537bc3b6abae25ebff19d.jpg" alt="Clothing">
+        <h3>Clothing</h3>
+        <p>Find trendy and stylish clothing for every occasion. From casual wear to formal outfits.</p>
+        <a href="#" onclick="filterProducts('clothing')" class="btn">Shop Clothing</a>
+      </div>
+      <div class="info-card">
+        <img src="https://i.pinimg.com/236x/c0/e5/cc/c0e5cc0cfcab2a1282ed6be1202cb427.jpg" alt="Groceries">
+        <h3>Groceries</h3>
+        <p>Get fresh groceries and household essentials delivered to your door. Quality and convenience.</p>
+        <a href="#" onclick="filterProducts('groceries')" class="btn">Shop Groceries</a>
+      </div>
+      <div class="info-card">
+        <img src="https://i.pinimg.com/236x/28/3d/94/283d943d629d9dcb8d044b977efffc34.jpg" alt="Food">
+        <h3>Food</h3>
+        <p>Explore a variety of food items including fresh produce, snacks, and ready-to-eat meals.</p>
+        <a href="#" onclick="filterProducts('food')" class="btn">Shop Food</a>
+      </div>
+    </div>
+  </main>
+
+  <main id="products" style="display:none;">
+    <h2>Our Products</h2>
+    <button onclick="filterProducts('clothing')">Clothing</button>
+    <button onclick="filterProducts('food')">Food</button>
+    <button onclick="filterProducts('groceries')">Groceries</button>
+    <button onclick="filterProducts('all')">All Products</button>
+
+    <div class="product-grid" id="product-grid">
+      <!-- Product Cards will go here -->
+    </div>
+  </main>
+
+  <main id="product-details" style="display:none;">
+    <div class="product-details">
+      <img src="https://i.pinimg.com/474x/78/16/54/781654ba30fa9c86abc3669d6b989a7f.jpg" alt="Product">
+      <h3>Product Name</h3>
+      <p>Description of the product goes here. This includes the features, benefits, and other details about the product.</p>
+
+      <div class="reviews-section">
+        <div class="review">
+          <h4>John Doe</h4>
+          <p>This product is amazing! Highly recommended.</p>
+        </div>
+        <div class="review">
+          <h4>Jane Smith</h4>
+          <p>Great quality. Worth the price.</p>
+        </div>
+      </div>
+
+      <div class="review-form">
+        <textarea placeholder="Write your review here..."></textarea><br>
+        <button>Submit Review</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Our Marketplace. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
